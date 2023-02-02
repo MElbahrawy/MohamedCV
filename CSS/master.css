@@ -1,7 +1,8 @@
 /* --------------Variables-------------- */
 
 :root {
-    --main-color: #499fdd;
+    --main-color: #0B2545;
+    --second-color: #8DA9C4;
 }
 
 
@@ -53,25 +54,6 @@ img {
     font-size: 28px;
     margin: 10px 10px 10px 0;
 }
-.spikes {
-    position: relative;
-    /* background: #2c3e50; */
-    height: 50vh;
-  }
-  
-.spikes::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: -0%;
-    top: 100%;
-    z-index: 10;
-    display: block;
-    height: 50px;
-    background-size: 60px 100%;
-    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
-    background-position: 0 0;
-  }
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -118,7 +100,7 @@ header {
     position: absolute;
     /* position: relative; */
     bottom: -75px;
-    border: 5px solid black;
+    border: 5px solid var(--main-color);
 }
 .personalDetails {
     display: flex;
@@ -129,19 +111,26 @@ header {
 .personalDetails h1{
     padding: 30px;
     font-weight: 400;
-    
+    color: white;
 }
 
 .personalDetails h1 span{
-    font-weight: 500;
+    font-weight: 700;
 }
 .personalDetails p{
-    background-color: rgb(171, 180, 57);
+    background-color: var(--second-color);
+    color: #134074;
     padding: 10px;
     font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px ;
+    -webkit-border-radius: 2px ;
+    -moz-border-radius: 2px ;
+    -ms-border-radius: 2px ;
+    -o-border-radius: 2px ;
 }
 .personalDetails *:not(span) {
-    color: white;
+    /* color: white; */
     padding-left: 300px;
     margin: 0;
 }
@@ -245,6 +234,10 @@ aside article p,aside li,aside a {
 }
 .skills div h3 {
     margin: 20px 0;
+}
+
+.skills h3 {
+    font-style: italic;
 }
 @media ( max-width: 991px) {
     .card:last-child {
