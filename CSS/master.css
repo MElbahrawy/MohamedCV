@@ -3,6 +3,8 @@
 :root {
     --main-color: #0B2545;
     --second-color: #8DA9C4;
+    --second-text-color: #969696;
+    --border-color: #ccc;
 }
 
 
@@ -82,7 +84,7 @@ header {
     display: flex;
     position: relative;
     background-color: var(--main-color);
-    height: 20vh;
+    height: 180px;
     align-items: flex-end;
 
 }
@@ -119,7 +121,7 @@ header {
 }
 .personalDetails p{
     background-color: var(--second-color);
-    color: #134074;
+    color: white;
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -144,8 +146,12 @@ header {
         display: none;
     
     }
+    .personalDetails {
+        
+    }
     .personalDetails *:not(span) {
-        padding-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
         text-align: center;
     }
 }
@@ -223,13 +229,24 @@ aside article p,aside li,aside a {
     align-items: baseline;
     gap: 10px;
     margin-bottom: 10px;
+    
 }
-
+.contact a{
+    transition: linear 0.1s all ;
+    -webkit-transition: linear 0.1s all ;
+    -moz-transition: linear 0.1s all ;
+    -ms-transition: linear 0.1s all ;
+    -o-transition: linear 0.1s all ;
+}
+.contact a:hover {
+    color: var(--main-color);
+    font-weight: bold;
+}
 /* ---------------------------------- */
 /* --------------Skills-------------- */
 
 .skills >div:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+    border-bottom: 1px solid var(--border-color);
     padding: 10px;
 }
 .skills div h3 {
@@ -282,13 +299,44 @@ section article {
     -o-border-radius: 20px;
 }
 
-/* --------------AboutMe-------------- */
+/* --------------Profile-------------- */
 
-.aboutMe {
+.profile {
     line-height: 1.8;
 }
 
-/* ---------------------------------- */
+/* ------------------------------------- */
+/* --------------Experince-------------- */
+
+.workExperince section {
+    display: flex;
+    gap: 20px;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+.workExperince .date {
+}
+.workExperince .experince {
+    flex: 1;
+}
+.experince .experinceTitle {
+    font-weight: 600;
+}
+.experince .experinceLocation {
+    color: var(--second-text-color);
+}
+.experince .experinceDetails {
+    position: relative;
+    margin-left: 10px;
+}
+.experince .experinceDetails::before {
+    content: "-";
+    position: absolute;
+    left: -10px;
+    
+}
+
 /* ---------------------------------- */
 /* --------------Footer-------------- */
 
